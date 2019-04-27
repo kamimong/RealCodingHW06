@@ -63,4 +63,10 @@ public class CalculatorTest {
         doThrow(new IllegalArgumentException()).when(cal).square(5);
         cal.square(5);
     }
+    @Test
+    public void triangleConfirm(){
+        Calculator cal = mock(Calculator.class);
+        cal.triangle(4,5);
+        verify(cal).triangle(4,5);
+    }
 }
