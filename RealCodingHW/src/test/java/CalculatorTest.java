@@ -51,8 +51,8 @@ public class CalculatorTest {
         assertEquals(calculator.getYen(),(calculator.getWon() / 10));
     }
 //**************************yy************************************
-@Test
-public void CircleConform(){
+    @Test
+    public void CircleConform(){
     Calculator cal = mock(Calculator.class);
     when(cal.circle(3)).thenReturn(28.26);
     assertThat(cal.circle(3), is(28.26));
@@ -62,5 +62,11 @@ public void CircleConform(){
         Calculator cal = mock(Calculator.class);
         doThrow(new IllegalArgumentException()).when(cal).square(5);
         cal.square(5);
+    }
+    @Test
+    public void triangleConfirm(){
+        Calculator cal = mock(Calculator.class);
+        cal.triangle(4,5);
+        verify(cal).triangle(4,5);
     }
 }

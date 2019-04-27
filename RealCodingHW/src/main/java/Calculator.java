@@ -25,4 +25,7 @@ public class Calculator {
     public int square(int a){
         return a*a;
     }
+    public double triangle(int a, int b){
+        return a*b/2;
+    }
 }
