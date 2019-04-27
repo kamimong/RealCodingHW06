@@ -19,4 +19,9 @@ public class Calculator {
     public void wonToPound() { pound = getWon() / 1500; }
     public void wonToYen() { yen = getWon() / 10; }
 
+    //-----------------------------kyy-----------------------------------------------
+    public double circle(int a){
+        return a*a*3.14;
+    }
+
 }

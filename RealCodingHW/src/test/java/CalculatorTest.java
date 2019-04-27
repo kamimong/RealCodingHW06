@@ -2,6 +2,7 @@ import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
@@ -49,5 +50,11 @@ public class CalculatorTest {
         calculator.wonToYen();
         assertEquals(calculator.getYen(),(calculator.getWon() / 10));
     }
-
+    //******************kyy********************************************
+    @Test
+    public void CircleConform(){
+        Calculator cal = mock(Calculator.class);
+        when(cal.circle(3)).thenReturn(28.26);
+        assertThat(cal.circle(3), is(28.26));
+    }
 }
