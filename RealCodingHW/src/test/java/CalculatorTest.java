@@ -57,4 +57,10 @@ public void CircleConform(){
     when(cal.circle(3)).thenReturn(28.26);
     assertThat(cal.circle(3), is(28.26));
 }
+    @Test(expected = IllegalArgumentException.class)
+    public void fiveReject(){
+        Calculator cal = mock(Calculator.class);
+        doThrow(new IllegalArgumentException()).when(cal).square(5);
+        cal.square(5);
+    }
 }
